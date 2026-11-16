@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8f5ef; /* 아이보리 */
+  --surface: #ffffff;
+  --foreground: #1f2422;
+  --muted: #6f6a60;
+  --ink: #18201d; /* 딥그린 차콜 */
+  --ink-2: #222c28;
+  --gold: #a8844c; /* 샴페인 골드 */
+  --gold-light: #d7bf8f;
+  --line: #e6dfd2;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 72px;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Apple SD Gothic Neo",
+    "Malgun Gothic", "Pretendard", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.01em;
+}
+
+.font-serif-ko {
+  font-family: var(--font-serif), "Nanum Myeongjo", "AppleMyungjo", "Batang", serif;
+  letter-spacing: -0.02em;
+}
+
+.gold-rule {
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.anim-modal {
+  animation: modal-in 0.22s ease-out;
+}
+.anim-fade {
+  animation: fade-in 0.2s ease-out;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-ink: var(--ink);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-line: var(--line);
+  --color-muted: var(--muted);
+}
